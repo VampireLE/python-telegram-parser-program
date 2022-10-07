@@ -1,8 +1,6 @@
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
-import keyboard
-import os
 import requests
 from bs4 import BeautifulSoup
 from aiogram.types import ReplyKeyboardRemove, \
