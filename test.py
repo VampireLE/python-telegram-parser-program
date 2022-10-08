@@ -304,7 +304,7 @@ async def send_random_value(callback: types.CallbackQuery):
 	data_time.clear()
 	data_name.clear()
 	last_result.clear()
-	get_page(25)
+	get_page(24)
 	await callback.message.answer(a)
 
 
