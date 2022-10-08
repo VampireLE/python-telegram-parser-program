@@ -84,8 +84,8 @@ inline_btn_20 = InlineKeyboardButton('Карусель', callback_data='20')
 inline_btn_21 = InlineKeyboardButton('2x2', callback_data='21')
 inline_btn_22 = InlineKeyboardButton('СТС Love', callback_data='22')
 inline_btn_23 = InlineKeyboardButton('Disney', callback_data='23')
-inline_btn_25 = InlineKeyboardButton('МИР', callback_data='24')
-inline_kb1 = InlineKeyboardMarkup().add(inline_btn_1, inline_btn_2, inline_btn_3, inline_btn_4, inline_btn_5, inline_btn_6, inline_btn_7, inline_btn_8, inline_btn_9, inline_btn_10, inline_btn_11, inline_btn_12, inline_btn_13, inline_btn_14, inline_btn_15, inline_btn_16, inline_btn_17, inline_btn_18, inline_btn_19, inline_btn_20, inline_btn_21, inline_btn_22, inline_btn_23, inline_btn_24, inline_btn_25)
+inline_btn_24 = InlineKeyboardButton('МИР', callback_data='24')
+inline_kb1 = InlineKeyboardMarkup().add(inline_btn_1, inline_btn_2, inline_btn_3, inline_btn_4, inline_btn_5, inline_btn_6, inline_btn_7, inline_btn_8, inline_btn_9, inline_btn_10, inline_btn_11, inline_btn_12, inline_btn_13, inline_btn_14, inline_btn_15, inline_btn_16, inline_btn_17, inline_btn_18, inline_btn_19, inline_btn_20, inline_btn_21, inline_btn_22, inline_btn_23, inline_btn_24)
 
 @dp.message_handler(commands=["show"])
 async def process_command_1(message:types.Message):
