@@ -91,221 +91,207 @@ inline_kb1 = InlineKeyboardMarkup().add(inline_btn_1, inline_btn_2, inline_btn_3
 async def process_command_1(message:types.Message):
 	await message.answer("Выберите канал:", reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='1')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(1)
-	await callback.message.answer(a)
+@dp.callback_query_handler()
+async def send_parse(callback: types.CallbackQuery):
+    if callback.data == "1":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(1)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='2')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(2)
-	await callback.message.answer(a)
+    elif callback.data == "2":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(2)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='3')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(3)
-	await callback.message.answer(a)
+    elif callback.data == "3":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(3)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='4')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(4)
-	await callback.message.answer(a)
+    elif callback.data == "4":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(4)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='5')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(5)
-	await callback.message.answer(a)
+    elif callback.data == "5":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(5)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='6')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(6)
-	await callback.message.answer(a)
+    elif callback.data == "6":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(6)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='7')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(7)
-	await callback.message.answer(a)
+    elif callback.data == "7":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(7)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='8')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(8)
-	await callback.message.answer(a)
+    elif callback.data == "8":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(8)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='9')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(9)
-	await callback.message.answer(a)
+    elif callback.data == "9":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(9)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='10')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(10)
-	await callback.message.answer(a)
+    elif callback.data == "10":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(10)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='11')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(11)
-	await callback.message.answer(a)
+    elif callback.data == "11":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(11)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='12')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(12)
-	await callback.message.answer(a)
+    elif callback.data == "12":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(12)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='13')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(13)
-	await callback.message.answer(a)
+    elif callback.data == "13":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(13)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='14')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(14)
-	await callback.message.answer(a)
+    elif callback.data == "14":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(14)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='15')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(15)
-	await callback.message.answer(a)
+    elif callback.data == "15":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(15)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='16')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(16)
-	await callback.message.answer(a)
+    elif callback.data == "16":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(16)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='17')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(17)
-	await callback.message.answer(a)
+    elif callback.data == "17":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(17)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='18')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(18)
-	await callback.message.answer(a)
+    elif callback.data == "18":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(18)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='19')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(19)
-	await callback.message.answer(a)
+    elif callback.data == "19":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(19)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='20')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(20)
-	await callback.message.answer(a)
+    elif callback.data == "20":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(20)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='21')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(21)
-	await callback.message.answer(a)
+    elif callback.data == "21":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(21)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='22')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(22)
-	await callback.message.answer(a)
+    elif callback.data == "22":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(22)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='23')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(23)
-	await callback.message.answer(a)
+    elif callback.data == "23":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(23)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-@dp.callback_query_handler(text='24')
-async def send_random_value(callback: types.CallbackQuery):
-	await callback.message.answer(word)
-	data_time.clear()
-	data_name.clear()
-	last_result.clear()
-	get_page(24)
-	await callback.message.answer(a)
+    elif callback.data == "24":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(24)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
+
+    elif callback.data == "25":
+        data_time.clear()
+        data_name.clear()
+        last_result.clear()
+        get_page(25)
+        await callback.answer()
+        return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
 
 # if __name__ == '__main__':
