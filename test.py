@@ -10,7 +10,11 @@ from aiogram.types import ReplyKeyboardRemove, \
 data_time = []
 data_name = []
 last_result = []
-word = ("Загружаю программу...")
+
+def clear_list():
+	data_time.clear()
+        data_name.clear()
+        last_result.clear()
 
 def get_page(number_channel):
 	
@@ -94,201 +98,151 @@ async def process_command_1(message:types.Message):
 @dp.callback_query_handler()
 async def send_parse(callback: types.CallbackQuery):
     if callback.data == "1":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(1)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "2":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(2)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "3":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(3)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "4":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(4)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "5":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(5)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "6":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(6)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "7":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(7)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "8":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(8)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "9":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(9)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "10":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(10)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "11":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(11)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "12":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(12)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "13":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(13)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "14":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(14)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "15":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(15)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "16":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(16)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "17":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(17)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "18":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(18)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "19":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(19)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "20":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(20)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "21":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(21)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "22":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(22)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "23":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(23)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "24":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(24)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "25":
-        data_time.clear()
-        data_name.clear()
-        last_result.clear()
+	clear_list()
         get_page(25)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
