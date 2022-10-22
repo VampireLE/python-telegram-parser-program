@@ -12,45 +12,45 @@ data_name = []
 last_result = []
 
 def clear_list():
-	data_time.clear()
-        data_name.clear()
-        last_result.clear()
+    data_time.clear()
+    data_name.clear()
+    last_result.clear()
 
 def get_page(number_channel):
-	
-	headers = {
-	"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
-	}
-	url = 'https://tv.mail.ru/moskva/'
+    
+    headers = {
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
+    }
+    url = 'https://tv.mail.ru/moskva/'
 
-	r = requests.get(url=url, headers=headers)
-	soup = BeautifulSoup(r.text, 'lxml')
-	channels_item = soup.find_all('div', class_='p-channels__item')
+    r = requests.get(url=url, headers=headers)
+    soup = BeautifulSoup(r.text, 'lxml')
+    channels_item = soup.find_all('div', class_='p-channels__item')
 
-	channel(channels_item)
-	main(number_channel)
+    channel(channels_item)
+    main(number_channel)
 
 def channel(channels_item):
-	for program in channels_item:
-		name = program.find_all('span', class_='p-programms__item__name')
-		time = program.find_all('span', class_='p-programms__item__time')
-		for times in time:
-			data_time.append(times.text)
-		for names in name:
-			data_name.append(names.text)
-	
+    for program in channels_item:
+        name = program.find_all('span', class_='p-programms__item__name')
+        time = program.find_all('span', class_='p-programms__item__time')
+        for times in time:
+            data_time.append(times.text)
+        for names in name:
+            data_name.append(names.text)
+    
 
 def main(number_channel):
 
-	second = (number_channel * 5)
-	first = (second - 5)
-	for broadcast, transmission_time in zip(data_name[first:second], data_time[first:second]):
-		result = (transmission_time, "-", broadcast)
-		result = " ".join(result)
-		last_result.append(result)
-	global a
-	a = "\n".join(last_result)
-	
+    second = (number_channel * 5)
+    first = (second - 5)
+    for broadcast, transmission_time in zip(data_name[first:second], data_time[first:second]):
+        result = (transmission_time, "-", broadcast)
+        result = " ".join(result)
+        last_result.append(result)
+    global a
+    a = "\n".join(last_result)
+    
 
 #----------------------------------BOT---------------------------------------------------------------
 
@@ -62,7 +62,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=["start"])
 async def process_start_command(message: types.Message):
-	await message.answer("Привет!\nЭто бот который показывает тв программу\nВведи команду - /show чтобы узнать тв программу")
+    await message.answer("Привет!\nЭто бот который показывает тв программу\nВведи команду - /show чтобы узнать тв программу")
 
 
 inline_btn_1 = InlineKeyboardButton('Первый канал', callback_data='1')
@@ -93,156 +93,156 @@ inline_kb1 = InlineKeyboardMarkup().add(inline_btn_1, inline_btn_2, inline_btn_3
 
 @dp.message_handler(commands=["show"])
 async def process_command_1(message:types.Message):
-	await message.answer("Выберите канал:", reply_markup=inline_kb1)
+    await message.answer("Выберите канал:", reply_markup=inline_kb1)
 
 @dp.callback_query_handler()
 async def send_parse(callback: types.CallbackQuery):
     if callback.data == "1":
-	clear_list()
+        clear_list()
         get_page(1)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "2":
-	clear_list()
+        clear_list()
         get_page(2)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "3":
-	clear_list()
+        clear_list()
         get_page(3)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "4":
-	clear_list()
+        clear_list()
         get_page(4)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "5":
-	clear_list()
+        clear_list()
         get_page(5)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "6":
-	clear_list()
+        clear_list()
         get_page(6)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "7":
-	clear_list()
+        clear_list()
         get_page(7)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "8":
-	clear_list()
+        clear_list()
         get_page(8)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "9":
-	clear_list()
+        clear_list()
         get_page(9)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "10":
-	clear_list()
+        clear_list()
         get_page(10)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "11":
-	clear_list()
+        clear_list()
         get_page(11)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "12":
-	clear_list()
+        clear_list()
         get_page(12)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "13":
-	clear_list()
+        clear_list()
         get_page(13)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "14":
-	clear_list()
+        clear_list()
         get_page(14)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "15":
-	clear_list()
+        clear_list()
         get_page(15)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "16":
-	clear_list()
+        clear_list()
         get_page(16)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "17":
-	clear_list()
+        clear_list()
         get_page(17)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "18":
-	clear_list()
+        clear_list()
         get_page(18)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "19":
-	clear_list()
+        clear_list()
         get_page(19)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "20":
-	clear_list()
+        clear_list()
         get_page(20)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "21":
-	clear_list()
+        clear_list()
         get_page(21)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "22":
-	clear_list()
+        clear_list()
         get_page(22)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "23":
-	clear_list()
+        clear_list()
         get_page(23)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "24":
-	clear_list()
+        clear_list()
         get_page(24)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "25":
-	clear_list()
+        clear_list()
         get_page(25)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
