@@ -99,85 +99,85 @@ async def process_command_1(message:types.Message):
 async def send_parse(callback: types.CallbackQuery):
     if callback.data == "1":
         clear_list()
-        get_page(15)
+        get_page(2)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "2":
         clear_list()
-        get_page(2)
+        get_page(3)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "3":
         clear_list()
-        get_page(3)
+        get_page(4)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "4":
         clear_list()
-        get_page(4)
+        get_page(5)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "5":
         clear_list()
-        get_page(5)
+        get_page(6)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "6":
         clear_list()
-        get_page(6)
+        get_page(7)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "7":
         clear_list()
-        get_page(7)
+        get_page(8)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "8":
         clear_list()
-        get_page(8)
+        get_page(9)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "9":
         clear_list()
-        get_page(9)
+        get_page(10)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "10":
         clear_list()
-        get_page(10)
+        get_page(11)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "11":
         clear_list()
-        get_page(11)
+        get_page(12)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "12":
         clear_list()
-        get_page(12)
+        get_page(13)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "13":
         clear_list()
-        get_page(13)
+        get_page(14)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
     elif callback.data == "14":
         clear_list()
-        get_page(14)
+        get_page(15)
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
