@@ -97,7 +97,7 @@ async def process_command_1(message:types.Message):
 
 @dp.callback_query_handler()
 async def send_parse(callback: types.CallbackQuery):
-    if callback.data == "15":
+    if callback.data == "1":
         clear_list()
         get_page(15)
         await callback.answer()
@@ -181,7 +181,7 @@ async def send_parse(callback: types.CallbackQuery):
         await callback.answer()
         return await callback.message.edit_text(a, reply_markup=inline_kb1)
 
-    elif callback.data == "1":
+    elif callback.data == "15":
         clear_list()
         get_page(1)
         await callback.answer()
