@@ -56,7 +56,7 @@ def main(number_channel):
 
 print("Hello")
 
-API = '5215475103:AAHRpCQtSEhgNutKoMKfcQgy7HiydY5fxME'
+API = 'API'
 bot = Bot(API)
 dp = Dispatcher(bot)
 
